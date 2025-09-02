@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 24rem;
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 100%;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+        }
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            outline: none;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+        }
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        #signup-button {
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+        #signup-button:hover {
+            background-color: #2563eb;
+        }
+        .message {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        .error-message {
+            color: #ef4444;
+        }
+        .success-message {
+            color: #10b981;
+        }
+        .link {
+            text-align: center;
+            display: block;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form id="signup-form" action="registration.php" method="POST">
+            <h2>Sign Up</h2>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="tel" name="phone_number" placeholder="Phone Number (optional)">
+            <button type="submit" id="signup-button">Sign Up</button>
+            <p class="link">Already have an account? <a href="testingLogin.html">Log In</a></p>
+        </form>
+    </div>
+
+</body>
+</html>
